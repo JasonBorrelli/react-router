@@ -5,6 +5,7 @@ import { Link } from "react-router";
 
 
 
+
 export default function ProductsPage() {
 
 
@@ -53,17 +54,18 @@ fetchProducts();
 
         {error && <p className="text-center fw-semibold text-danger">Errore nel caricamento dei prodotti</p>}
 
-        <div className="container mt-4 bg-light">
-            <div className="row g-4 text-center">
+        <div className="container my-4 bg-light p-3 rounded-3 ">
+            <div className="row g-4  d-flex justify-content-around text-center">
+
                 {products.map(product => (
                     <div key={product.id} className="col-md-4 mb-4">
-                        <div className="card">
-                            <img src={product.thumbnail} className="card-img-top" alt={product.title} />
+                        <div className="card border border- bg-light rounded-3 shadow-sm">
+                            <img src={product.thumbnail} className="card-img-top  " alt={product.title} />
                             <div className="card-body">
-                                <h5 className="card-title">{product.title}</h5>
-                                <p className="card-text">{product.description}</p>
+                                <h5 className="card-title ">{product.title}</h5>
+                                <p className="card-text fst-italic">{product.description}</p>
                                 <p className="fw-bold text-primary">Price: {product.price}€</p>
-                                <Link to={`/products/${product.id}`} className="btn btn-primary">View Details</Link>
+                                <Link to={`/products/${product.id}`} className="container bg-light border border-primary p-1 rounded-2 text-decoration-none text-primary fw-semibold">View Details</Link>
                             </div>
                         </div>
                     </div>
