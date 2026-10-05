@@ -7,7 +7,6 @@ import Banner from "../ui/Banner";
 
 
 
-
 export default function ProductsPage() {
 
 
@@ -44,31 +43,29 @@ fetchProducts();
 },[]);
 
 
-    return (
+   return (
     <section className="container-fluid my-3 px-4">
-      {/* Riga principale che divide la pagina in due colonne */}
+      {/* Riga principale: Banner a sinistra (col-lg-2) e Prodotti a destra (col-lg-10) */}
       <div className="row g-4">
         
-        {/* COLONNA SINISTRA: Banner Verticale */}
-        <aside className="col-12 col-lg-3 d-flex flex-column">
+        {/* COLONNA SINISTRA: Banner Verticale più stretto */}
+        <aside className="col-12 col-lg-2 d-flex flex-column">
           <div className="bg-white border rounded-3 shadow-sm p-3 h-100 d-flex flex-column justify-content-between text-center">
             <div>
-              <h4 className="fw-bold text-primary mb-3">Pubblicità</h4>
+              <h5 className="fw-bold text-primary mb-3">Pubblicità</h5>
               <p className="text-muted small">
-                Scopri i nostri sponsor e le loro fantastiche offerte!
+                Visualizza le offerte dei nostri sponsor.
               </p>
               
-              {/* Esempio di banner generato o immagine statica */}
               <div className="my-3">
                 <Banner />
               </div>
             </div>
-
           </div>
         </aside>
 
-        {/* COLONNA DESTRA: Contenuto Principale (Titolo, Loading, Error e Prodotti) */}
-        <div className="col-12 col-lg-9">
+        {/* COLONNA DESTRA: Contenuto Principale più largo */}
+        <div className="col-12 col-lg-10">
           <div className="bg-white border rounded-3 shadow-sm px-4 py-3 w-100">
             <h1 className="text-center mb-4">ProductsPage</h1>
 
@@ -90,7 +87,7 @@ fetchProducts();
               <div className="container-fluid my-2 bg-light p-3 rounded-3">
                 <div className="row g-4 justify-content-around text-center">
                   {products.map((product) => (
-                    <div key={product.id} className="col-md-6 col-xl-4 mb-4">
+                    <div key={product.id} className="col-sm-6 col-md-4 col-xl-3 mb-4">
                       <div className="card border bg-light rounded-3 shadow-sm h-100">
                         <img
                           src={product.thumbnail}
@@ -99,14 +96,14 @@ fetchProducts();
                         />
                         <div className="card-body d-flex flex-column justify-content-between">
                           <div>
-                            <h5 className="card-title">{product.title}</h5>
-                            <p className="card-text fst-italic small">{product.description}</p>
+                            <h5 className="card-title fs-6">{product.title}</h5>
+                            <p className="card-text fst-italic small text-muted">{product.description}...</p>
                           </div>
                           <div>
                             <p className="fw-bold text-primary my-2">Price: {product.price}€</p>
                             <Link
                               to={`/products/${product.id}`}
-                              className="d-block bg-light border border-primary p-2 rounded-2 text-decoration-none text-primary fw-semibold"
+                              className="d-block bg-light border border-primary p-2 rounded-2 text-decoration-none text-primary fw-semibold small"
                             >
                               View Details
                             </Link>

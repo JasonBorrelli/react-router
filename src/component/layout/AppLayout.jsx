@@ -7,7 +7,7 @@ export default function AppLayout() {
     return (
         <>
             <Header />
-            <main className="container my-4">
+            <main className="container-fluid my-4">
                 <Outlet />
             </main>
             <Footer />

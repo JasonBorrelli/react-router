@@ -50,7 +50,7 @@ export default function SingolProductPage() {
                     <p className="mt-4 mb-4 fw-bold text-primary">Price: {product.price}€</p>
                 </div>
             )}
-            <Link to={`/products`} className="container bg-light border border-primary d-flex justify-content-center align-items-center w-25 p-1 rounded-2 text-decoration-none text-primary fw-semibold m-auto mt-4"><span className="m-2"><Undo2 /></span> Back to Products </Link>
+            <Link to={`/products`} className="container bg-light border border-primary justify-content-center align-items-center p-2 w-25 m-3 rounded-pill text-decoration-none text-primary fw-semibold m-auto"><span className="m-2"><Undo2 /></span> Back to Products </Link>
         </section>
     )
 }    
