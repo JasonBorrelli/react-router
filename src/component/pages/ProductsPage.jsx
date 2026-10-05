@@ -53,9 +53,9 @@ fetchProducts();
         <aside className="col-12 col-lg-3 d-flex flex-column">
           <div className="bg-white border rounded-3 shadow-sm p-3 h-100 d-flex flex-column justify-content-between text-center">
             <div>
-              <h4 className="fw-bold text-primary mb-3">Special Offer!</h4>
+              <h4 className="fw-bold text-primary mb-3">Pubblicità</h4>
               <p className="text-muted small">
-                Scopri le nostre offerte imperdibili della settimana. Sconti fino al 50% su prodotti selezionati.
+                Scopri i nostri sponsor e le loro fantastiche offerte!
               </p>
               
               {/* Esempio di banner generato o immagine statica */}
