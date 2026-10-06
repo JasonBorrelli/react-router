@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useEffect } from "react";
 import { Link } from "react-router";
 import Banner from "../ui/Banner";
+import NotFoundPage from "./NotFound";
 
 
 
@@ -36,6 +37,10 @@ async function fetchProducts() {
     } finally {
         setIsLoading(false);
     }   
+
+
+
+
 };
 
 fetchProducts();
@@ -81,6 +86,7 @@ fetchProducts();
             {error && (
               <p className="text-center fw-semibold text-danger mt-3">{error}</p>
             )}
+            
 
             {/* Products Grid */}
             {!isLoading && !error && (
