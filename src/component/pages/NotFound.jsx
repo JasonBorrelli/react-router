@@ -11,4 +11,4 @@ export default function NotFoundPage() {
             <Link to="/" className="text-decoration-none fw-semibold text-primary p-2 border border-primary w-25 rounded-pill"><Undo2 /> Torna alla Home</Link>
         </section>
     )
-}    
+}     
