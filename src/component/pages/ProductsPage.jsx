@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useEffect } from "react";
 import { Link } from "react-router";
 import Banner from "../ui/Banner";
-import NotFoundPage from "./NotFound";
+
 
 
 
@@ -18,7 +18,7 @@ const [error, setError] = useState("")
 
 
 
-useEffect(() => {
+useEffect(() => {                 
 async function fetchProducts() {  
     
     setIsLoading(true)
